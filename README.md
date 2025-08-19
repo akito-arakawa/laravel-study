@@ -1,5 +1,7 @@
 # docker-laravel 🐳
 
+This project was bootstrapped from ucan-lab/docker-laravel (MIT).
+
 <p align="center">
     <img src="https://user-images.githubusercontent.com/35098175/145682384-0f531ede-96e0-44c3-a35e-32494bd9af42.png" alt="docker-laravel">
 </p>
