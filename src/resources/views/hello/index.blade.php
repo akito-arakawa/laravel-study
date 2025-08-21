@@ -18,33 +18,20 @@
 </head>
 
 <body>
-    <p>{{  $msg }}</p>
-    @if (count($errors) > 0)
-        <div>
-            <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="/hello" method="post">
-        @csrf
-        <div>
-            <label style="display:inline-block; width:75px;" for="name">name:</label>
-            <input type="text" name="name">
-        </div>
-        <div>
-            <label style="display:inline-block; width:75px;" for="mail">mail:</label>
-            <input type="text" name="mail">
-        </div>
-        <div>
-            <label style="display:inline-block; width:75px;" for="age">age:</label>
-            <input type="number" name="age">
-            <input type="submit" value="send">
-        </div>
-    </form>
-
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Age</th>
+        </tr>
+        @foreach ($items as $item)
+            <tr>
+                <td>{{ $item->name }}</td>
+                <td>{{ $item->mail }}</td>
+                <td>{{ $item->age }}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 
 </html>
